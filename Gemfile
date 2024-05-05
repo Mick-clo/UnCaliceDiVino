@@ -9,6 +9,12 @@ gem "sinatra"
 gem "sinatra-contrib"
 gem "thin"
 
+gem "faker"
+gem "pry"
+gem "rake"
+gem "sinatra-activerecord"
+# gem "sqlite3"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
