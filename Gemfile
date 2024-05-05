@@ -2,6 +2,13 @@ source "https://rubygems.org"
 
 ruby "3.1.2"
 
+# Sinatra!
+gem "binding_of_caller"
+gem "pry-byebug"
+gem "sinatra"
+gem "sinatra-contrib"
+gem "thin"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"
 
