@@ -5,14 +5,14 @@ ruby "3.1.2"
 # Sinatra!
 gem "binding_of_caller"
 gem "pry-byebug"
-gem "sinatra"
-gem "sinatra-contrib"
+# gem "sinatra"
+# gem "sinatra-contrib"
 gem "thin"
 
 gem "faker"
 gem "pry"
 gem "rake"
-gem "sinatra-activerecord"
+# gem "sinatra-activerecord"
 # gem "sqlite3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
@@ -63,6 +63,7 @@ gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
+gem "pundit"
 
 group :development, :test do
   gem "dotenv-rails"
@@ -87,4 +88,9 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+end
+
+group :development do
+    # [...]
+    gem "hotwire-livereload"
 end
