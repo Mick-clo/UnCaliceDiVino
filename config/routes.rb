@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
+  get 'set_locale', to: 'application#set_locale', as: 'set_locale'  # Ensure you have the 'as' option
+
   # Defines the root path route ("/")
   # root "posts#index"
   get "home", to: "pages#home"
