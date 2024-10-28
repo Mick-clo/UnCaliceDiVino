@@ -5,15 +5,16 @@ ruby "3.1.2"
 # Sinatra!
 gem "binding_of_caller"
 gem "pry-byebug"
-gem "sinatra"
-gem "sinatra-contrib"
+# gem "sinatra"
+# gem "sinatra-contrib"
 gem "thin"
 
 gem "faker"
 gem "pry"
 gem "rake"
-gem "sinatra-activerecord"
+# gem "sinatra-activerecord"
 # gem "sqlite3"
+gem 'i18n', '~> 1.9'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3"

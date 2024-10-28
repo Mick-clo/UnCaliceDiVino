@@ -29,3 +29,26 @@
 
 en:
   hello: "Hello world"
+en:
+  welcome: "Welcome to our site"
+
+en:
+  time:
+    formats:
+      short: "%d%m%Y %H:%I%P"
+en:
+  date:
+    abbr_month_names:
+    - 
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
