@@ -4,12 +4,10 @@
     background-color: #50552E; /* Adjust as needed */
     display: flex;
     flex-direction: column;
-    height: 100%;
     padding: 16px;
-
 }
-  
-.footer-container{
+
+.footer-container {
     margin-top: auto;
     width: 100%;
     padding: 16px 0; /* Adjust as needed */
@@ -19,5 +17,34 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    font-size: 24px;
+    padding: 0px 16px;
+}
+
+.footer a {
+    color: #FCF9F4;
     text-decoration: none;
+    font-size: 24px;
+    padding: 0px 8px;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+}
+
+.footer-section {
+    display: grid;
+    grid-template-columns: repeat(2, 6fr);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    padding: 0px 16px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
