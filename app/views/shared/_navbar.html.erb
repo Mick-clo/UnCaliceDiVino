@@ -6,15 +6,15 @@
     </button>
 
     <ul class="navbar-nav ms-auto">
-      <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= I18n.locale == :it ? 'IT' : 'EN' %>
-        </a>
-        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-          <%= link_to 'English', set_locale_path(locale: 'en'), class: "dropdown-item" %>
-          <%= link_to 'Italian', set_locale_path(locale: 'it'), class: "dropdown-item" %>
-        </div>
-      </li>
+    <li class="nav-item dropdown">
+      <a href="#" class="nav-link dropdown-toggle" id="languageDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%= I18n.locale == :it ? 'IT' : 'EN' %>
+      </a>
+      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+        <%= link_to 'English', set_locale_path(locale: 'en'), class: "dropdown-item" %>
+        <%= link_to 'Italian', set_locale_path(locale: 'it'), class: "dropdown-item" %>
+      </div>
+    </li>
     </ul>
     
     <%= link_to "#", class: "navbar-brand mx-auto" do %>
