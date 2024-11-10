@@ -342,6 +342,7 @@ DEPENDENCIES
   error_highlight (>= 0.4.0)
   faker
   font-awesome-sass (~> 6.1)
+  hotwire-livereload
   i18n (~> 1.9)
   importmap-rails
   jbuilder
