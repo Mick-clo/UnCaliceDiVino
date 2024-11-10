@@ -1,34 +1,41 @@
+.page-container {
+  overflow: hidden; /* Prevent any overflow */
+  max-width: 100vw; /* Ensure the width does not exceed the viewport width */
+  max-height: 100vh; /* Ensure the height does not exceed the viewport height */
+}
+
 .navbar {
-    background: none;
-    border: none;
-    box-shadow: none;
-    padding: 8px;
-    overflow: none;
-  }
-  
-  .navbar .container-fluid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .navbar .navbar-brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-.avatar{
-    border-radius: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 8px;
+}
+
+.navbar .container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.avatar {
+  border-radius: 0;
 }
 
 .no-arrow::after {
-    display: none;
+  display: none;
 }
 
 .dropdown-menu {
-    width: auto; /* Adjust the width as needed */
-    max-width: 200px; /* Set a max width that fits your design */
-    overflow-x: hidden; /* Prevent horizontal overflow */
-    right: 0; /* Align to the right of the dropdown toggle */
-    left: auto; /* Ensure the left is auto to prevent overflow */
-  }
+  width: auto; /* Adjust the width as needed */
+  max-width: 200px; /* Set a max width that fits your design */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  position: absolute;
+  right: -50px; /* Align to the right of the dropdown toggle */
+  left: 50px;
+}

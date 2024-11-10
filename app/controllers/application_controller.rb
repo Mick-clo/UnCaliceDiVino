@@ -19,3 +19,10 @@ class ApplicationController < ActionController::Base
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   end
 end
+
+class PagesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :home
+
+  def home
+  end
+end
