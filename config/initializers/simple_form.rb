@@ -25,10 +25,6 @@ SimpleForm.setup do |config|
     # and required attributes
     b.use :html5
 
-    # Calculates placeholders automatically from I18n
-    # You can also pass a string as f.input placeholder: "Placeholder"
-    b.use :placeholder
-
     ## Optional extensions
     # They are disabled unless you pass `f.input EXTENSION_NAME => true`
     # to the input. If so, they will retrieve the values from the model
@@ -166,9 +162,6 @@ SimpleForm.setup do |config|
   # Defines if the default input wrapper class should be included in radio
   # collection wrappers.
   # config.include_default_input_wrapper_class = true
-
-  # Defines which i18n scope will be used in Simple Form.
-  # config.i18n_scope = 'simple_form'
 
   # Defines validation classes to the input_field. By default it's nil.
   # config.input_field_valid_class = 'is-valid'
