@@ -1,6 +1,6 @@
-class CreateHotels < ActiveRecord::Migration[7.1]
+class CreateAgencies < ActiveRecord::Migration[7.1]
   def change
-    create_table :hotels do |t|
+    create_table :agencies do |t|
       t.string :name
       t.string :contacts
       t.string :description
