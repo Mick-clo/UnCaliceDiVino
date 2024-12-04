@@ -80,7 +80,6 @@ GEM
       concurrent-ruby (~> 1.0, >= 1.0.2)
       connection_pool (>= 2.2.5)
       drb
-      i18n (>= 1.6, < 2)
       logger (>= 1.4.2)
       minitest (>= 5.1)
       mutex_m
@@ -139,13 +138,9 @@ GEM
     eventmachine (1.2.7)
     execjs (2.10.0)
     faker (3.5.1)
-      i18n (>= 1.8.11, < 2)
-    ffi (1.17.0-aarch64-linux-gnu)
-    ffi (1.17.0-arm-linux-gnu)
+    ffi (1.17.0)
     ffi (1.17.0-arm64-darwin)
-    ffi (1.17.0-x86-linux-gnu)
     ffi (1.17.0-x86_64-darwin)
-    ffi (1.17.0-x86_64-linux-gnu)
     font-awesome-sass (6.5.2)
       sassc (~> 2.0)
     globalid (1.2.1)
@@ -154,7 +149,6 @@ GEM
       actioncable (>= 6.0.0)
       listen (>= 3.0.0)
       railties (>= 6.0.0)
-    i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.0.3)
       actionpack (>= 6.0.0)
@@ -352,7 +346,6 @@ DEPENDENCIES
   faker
   font-awesome-sass (~> 6.1)
   hotwire-livereload
-  i18n (~> 1.9)
   importmap-rails
   jbuilder
   pg (~> 1.1)
