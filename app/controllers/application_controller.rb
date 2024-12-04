@@ -1,5 +1,25 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!
+  before_action :set_locale
+
+  def set_locale
+
+    locale = params[:locale].to_s.strip.to_sym
+  
+    I18n.locale = I18n.available_locales.include?(locale) ?
+  
+        locale :
+  
+        I18n.default_locale
+  
+  end
+
+  def default_url_options
+
+    { locale: I18n.locale }
+
+  end
+
   include Pundit::Authorization
 
   # Pundit: allow-list approach
@@ -18,11 +38,16 @@ class ApplicationController < ActionController::Base
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
   end
-end
 
-class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: :home
 
-  def home
+  class PagesController < ApplicationController
+    skip_before_action :authenticate_user!, only: :home
+
+    def home
+    end
+  end
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
   end
 end
