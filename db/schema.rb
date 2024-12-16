@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_12_04_174512) do
+ActiveRecord::Schema[7.1].define(version: 2024_12_16_172531) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,11 +23,36 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_04_174512) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "bottles", force: :cascade do |t|
+    t.bigint "winery_id", null: false
+    t.string "name"
+    t.text "notes"
+    t.text "pairings"
+    t.text "stores"
+    t.integer "year"
+    t.text "description"
+    t.string "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["winery_id"], name: "index_bottles_on_winery_id"
+  end
+
   create_table "hotels", force: :cascade do |t|
     t.string "name"
     t.string "contacts"
     t.string "description"
     t.string "services_and_events"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string "name"
+    t.text "address"
+    t.float "hours"
+    t.text "description"
+    t.text "services"
+    t.integer "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,4 +77,18 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_04_174512) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "wineries", force: :cascade do |t|
+    t.string "name"
+    t.text "address"
+    t.float "hours"
+    t.text "description"
+    t.text "services"
+    t.integer "phone"
+    t.string "awars"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "bottles", "wineries"
 end
