@@ -8,8 +8,11 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   get 'set_locale', to: 'application#set_locale', as: 'set_locale'  # Ensure you have the 'as' option
+  resources :wineries
 
   # Defines the root path route ("/")
   # root "posts#index"
   get "home", to: "pages#home"
+  get "wineries", to: "wineries#index"
+  get "wineries/:id", to: "wineries#show"
 end
